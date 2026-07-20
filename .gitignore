@@ -1,10 +1,8 @@
-
 /references/
-/blog/
+blog/
+
 node_modules/
 dist/
 coverage/
 .DS_Store
 *.log
-/packages/cli/LICENSE
-/packages/cli/README.md
