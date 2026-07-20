@@ -1,0 +1,32 @@
+{
+  "name": "micropc-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "clean": "node scripts/clean.mjs",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check . && tsc --noEmit && node scripts/check-workspaces.mjs",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "npm run build && node --import tsx --test tests/e2e/*.test.ts",
+    "pack:dry": "npm pack --workspace micropc --dry-run"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.4",
+    "@types/node": "24.13.3",
+    "esbuild": "0.28.1",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3"
+  },
+  "license": "Apache-2.0"
+}

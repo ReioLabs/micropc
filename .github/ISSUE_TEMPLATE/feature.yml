@@ -1,0 +1,33 @@
+name: Feature proposal
+description: Propose a focused improvement to MicroPC
+title: "proposal: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: user-problem
+    attributes:
+      label: User problem
+      description: What concrete workflow is difficult today, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: smallest-behavior
+    attributes:
+      label: Smallest useful behavior
+      description: Describe the minimum visible change that solves the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: existing-tools
+    attributes:
+      label: Existing-tool boundary
+      description: Explain why this belongs in MicroPC rather than SmolVM, SSH, Tailscale, tmux, or an agent CLI.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: How could maintainers prove that this works and does not regress the core journey?
+    validations:
+      required: true

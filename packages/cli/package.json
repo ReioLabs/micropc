@@ -1,0 +1,43 @@
+{
+  "name": "micropc",
+  "version": "0.1.0",
+  "description": "Open, persistent micro-computers for coding agents",
+  "type": "module",
+  "bin": {
+    "micropc": "dist/main.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@micropc/agents": "0.1.0",
+    "@micropc/connector": "0.1.0",
+    "@micropc/core": "0.1.0",
+    "@micropc/driver-smolvm": "0.1.0",
+    "@micropc/host": "0.1.0",
+    "@micropc/process": "0.1.0",
+    "@micropc/storage": "0.1.0"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build.mjs",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "coding-agent",
+    "microvm",
+    "remote-development",
+    "smolvm",
+    "tailscale",
+    "tmux"
+  ],
+  "license": "Apache-2.0"
+}

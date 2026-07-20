@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2023"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true,
+    "forceConsistentCasingInFileNames": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@micropc/agents/*.js": ["packages/agents/src/*.ts"],
+      "@micropc/connector/*.js": ["packages/connector/src/*.ts"],
+      "@micropc/core/*.js": ["packages/core/src/*.ts"],
+      "@micropc/driver-smolvm/*.js": ["packages/driver-smolvm/src/*.ts"],
+      "@micropc/host/*.js": ["packages/host/src/*.ts"],
+      "@micropc/process/*.js": ["packages/process/src/*.ts"],
+      "@micropc/storage/*.js": ["packages/storage/src/*.ts"]
+    }
+  },
+  "include": ["packages/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["**/dist/**", "node_modules/**", "references/**"]
+}
